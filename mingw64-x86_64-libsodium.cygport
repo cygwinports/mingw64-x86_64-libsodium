@@ -1,0 +1,17 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libsodium"
+VERSION=1.0.8
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Sodium crypto library for Win64 toolchain"
+DESCRIPTION="Sodium is a modern, easy-to-use software library for encryption,
+decryption, signatures, password hashing and more.  It is a portable,
+cross-compilable, installable, packageable fork of NaCl, with a compatible
+API, and an extended API to improve usability even further."
+HOMEPAGE="https://download.libsodium.org/doc/"
+SRC_URI="https://download.libsodium.org/libsodium/releases/libsodium-${VERSION}.tar.gz"
+SRC_DIR="libsodium-${VERSION}"
+
+MAKEOPTS+=" defexec_DATA= "
